@@ -27,7 +27,7 @@ ASYNCADDR2      =     1                               ;maintain a second, offset
 
     include "const.s"
 
-        
+                bclr.b  #1,$00ff820a                        ;Force Video sync to 60Hz
             
                 pea     -1.w
                 move.w  #$48,-(a7)                          ;MALLOC
